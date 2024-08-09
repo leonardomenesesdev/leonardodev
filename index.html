@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Leonardo Meneses</title>
+    <link rel="stylesheet" href="text.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="sticky">
+        <a href="#" class="nome">LM</a>
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+        </ul>
+
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-div">
+            <div class="home-txt">
+                <div class="slide">
+                    <span class="one">Hello</span>
+                    <span class="two">I'm</span>
+                </div>
+                <h1>Leonardo Meneses</h1>
+                <h3>Estudante de Ciência da Computação</h3>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="img">
+            <img src="profile foto.jfif" alt="">
+        </div>
+        <div class="conhecimentos">
+            <h2>Sobre <span>Mim</span></h2>
+            <p>Olá, me chamo Leonardo e estou no 2° semestre de Ciência da Computação pela <a href="https://unifor.br/"><strong>UNIFOR</strong></a>. Atualmente estou em busca de aprimorar meus conhecimentos e da minha primeira oportunidade no mercado.</p>
+            <h3 class="destaque"><span>Hard</span> Skills</h3>
+            <h4>-   Estudante de Ciência da Computação na <a href="https://unifor.br/">UNIFOR</a></h4>
+            <h4>-   Conhecimentos em HTML e CSS</h4>
+            <h4>-   Conhecimentos em JavaScript e JAVA</h4>
+            <h4>-   Conhecimento em Git e GitHub</h4>
+            <h3 class="destaque"><span>Soft</span> Skills</h3>
+            <h4>-   Facilidade para trabalhos em equipe</h4>
+            <h4>-   Organizado</h4>
+            <h4>-   Comprometimento com prazos</h4>
+            <h4>-   Rápido aprendizado</h4>
+        </div>
+        <div class="link">
+            <a href="https://www.linkedin.com/in/leonardo-meneses-7919532a1/" target="_blank" class="btn-socials"><span><i class="bx bxl-linkedin"></i></span></a>
+            <a href="https://github.com/leonardomenesesdev" target="_blank" class="btn-socials"><span><i class="bx bxl-github"></i></span></a>
+            <a href="https://drive.google.com/drive/folders/15YbA4e6m64gZ6yv0QUT6QiqaBaIiBH7M?usp=sharing" target="_blank" class="btn-socials"><span><i class="bx-certification"></i></span></a>
+        </div>
+    </section>
+    <section class="projetos">
+        <div>
+            <h2>Alguns <span>Projetos</span></h2>
+            <div id="linkprojeto">
+                <ul>
+                    <li><a href="https://leonardomenesesdev.github.io/loginleohtml/">Front-End de uma tela de Login</a></li>
+                    <li><a href="https://leonardomenesesdev.github.io/imc/">Calculadora de IMC</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="top">
+            <a href="#home"><i class="bx bx-up-arrow-alt "></i></a>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector("header")
+        window.addEventListener("scroll", function(){
+            header.classList.toggle("sticky", window.scrollY>40)})
+            let menu=document.querySelector('#menu-icon')
+            let navlist=document.querySelector('.navlist')
+            menu.onclick = () =>{
+                navlist.classList.toggle('open')
+                if(window.scrollY<90){
+                    header.classList.toggle("sticky")
+                }
+            }
+            window.onscroll=()=>{
+                menu.classList.remove('bx-x')
+                navlist.classList.remove('open')
+            }
+            const top=document.getElementById("top")
+            window.addEventListener("scroll", function(){
+                top.classList.toggle("show-top", window.scrollY>140)
+                top.classList.toggle("hide-top", window.scrollY<140)
+            })
+            window.onload=()=>{
+                top.classList.toggle("hide-top")
+            }
+    </script>
+</body>
+</html>
